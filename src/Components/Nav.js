@@ -1,13 +1,17 @@
+import React, {useContext} from "react";
+import { NavLink } from "react-router-dom";
+import { MyContext } from "../Components/MyProvider";
+
 export default function Nav() {
+    const { context } = useContext(MyContext)
+
     return (
         <nav className="Nav">
-            <ul>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/services">SERVICES</a></li>
-                <li><a href="/portfolio">PORTFOLIO</a></li>
-                <li><a href="/contact">CONTACT</a></li>
-                <li><a href="/mentions-legales">MENTION LÉGALES</a></li>
-            </ul>
+            <NavLink to="/" activeClassName="active">Home</NavLink>
+            <NavLink to="/services" activeClassName="active">Services</NavLink>
+            <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
+            <NavLink to="/contact" activeClassName="active">Contact</NavLink>
+            <NavLink to="/mentions-legales" activeClassName="active">Mentions légales</NavLink>
         </nav>
     );
 }

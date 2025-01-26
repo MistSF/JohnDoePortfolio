@@ -1,3 +1,15 @@
+html, body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.container-fluid {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
 }
@@ -28,13 +40,31 @@
   color: #61dafb;
 }
 
-.Nav-header {
+.Nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   color: white;
   list-style: none;
+  text-transform: uppercase;
+  text-decoration: solid;
+  gap: 10px
+}
+
+.Nav > * {
+  text-decoration: solid;
+  color: white;
+  font-size: .6em;
+}
+
+.header-title {
+  font-size: 1em;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
@@ -44,4 +74,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.App-footer {
+  background-color: #282c34;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }

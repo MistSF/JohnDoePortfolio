@@ -1,8 +1,8 @@
 import React, { useContext} from "react"
-import { CoordonneesContext } from "../Components/CoordonneesProvider"
+import { MyContext } from "../Components/MyProvider"
 
 export default function Mentions() {
-    const {coordonnees} = useContext(CoordonneesContext)
+    const {coordonnees} = useContext(MyContext)
 
     return (
         <div>

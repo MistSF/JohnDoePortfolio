@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react';
 
-export const CoordonneesContext = createContext();
+export const MyContext = createContext();
 
-export const CoordonneesProvider = ({ children }) => {
+export const MyProvider = ({ children }) => {
     const [coordonnees, setCoordonnees] = useState({
         adresse: '40 rue Laure Diebold',
         codePostal: '69009',
@@ -13,8 +13,8 @@ export const CoordonneesProvider = ({ children }) => {
     });
 
     return (
-        <CoordonneesContext.Provider value={{ coordonnees, setCoordonnees }}>
+        <MyContext.Provider value={{ coordonnees, setCoordonnees }}>
             {children}
-        </CoordonneesContext.Provider>
+        </MyContext.Provider>
     )
 }
