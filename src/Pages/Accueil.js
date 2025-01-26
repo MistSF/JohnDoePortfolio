@@ -1,15 +1,13 @@
 import Competences from '../Components/Competences';
-import '../CSS/Accueil.css';
-
 
 export default function HomePage() {
     return (
         <div className="HomePage">
-            <section>
+            <section className="Section-1">
                 <h1>Bonjour, je suis John Doe</h1>
                 <h2>Développeur web full stack</h2>
             </section>
-            <section>
+            <section className="Section-2">
                 <article>
                     <h3>A propos</h3>
                     <img></img>
