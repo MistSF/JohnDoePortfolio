@@ -16,7 +16,7 @@ export default function Competences() {
                 const value = competence[key];
                 return (
                     <div>
-                        <li key={index}>{key} {value}%</li>
+                        <p key={index}>{key} {value}%</p>
                         <div className="progress">
                             <div className={`progress-bar bg-${bootstrapColors[index%bootstrapColors.length]}`} style={{width: `${value}%`}}></div>
                         </div>
